@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grey_40"
+                android:id="@+id/inputLayoutTitle">
+
+                <com.razzaghi.electionhelper.util.SimpleEditText
+                    android:id="@+id/edtTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="عنوان نظر"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grey_40"
+                android:id="@+id/inputLayoutDesc">
+
+                <com.razzaghi.electionhelper.util.SimpleEditText
+                    android:id="@+id/edtDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="85dp"
+                    android:hint="متن نظر"
+                    android:gravity="top"
+                    android:layout_gravity="top"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/imgDisLike"
+                    app:srcCompat="@drawable/ic_baseline_thumb_down_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <View
+                    android:layout_width="15dp"
+                    android:layout_height="match_parent" />
+                <ImageView
+                    android:foreground="?attr/selectableItemBackground"
+                    android:id="@+id/imgLike"
+                    app:srcCompat="@drawable/ic_baseline_thumb_up_grey"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <com.razzaghi.electionhelper.util.SimpleButton
+                    android:visibility="gone"
+                    android:textColor="@color/grey_100"
+                    android:id="@+id/btnDeleteComment"
+                    android:backgroundTint="@color/red_400"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="حذف"
+                    android:layout_marginRight="8dp"/>
+
+                <com.razzaghi.electionhelper.util.SimpleButton
+                    android:textColor="@color/grey_100"
+                    android:id="@+id/btnSaveComment"
+                    android:backgroundTint="@color/green_500"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ذخیره"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.cardview.widget.CardView>

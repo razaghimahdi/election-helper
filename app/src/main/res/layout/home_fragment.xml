@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragments.HomeFragment"
+    android:layoutDirection="ltr"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <RelativeLayout
+            android:animateLayoutChanges="true"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.cardview.widget.CardView
+                android:visibility="invisible"
+                android:id="@+id/cardViewClearSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:padding="4dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_baseline_close_24_yellow" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:id="@+id/txtSelectAll"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toRightOf="@id/cardViewClearSelected"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="همه"
+                android:textColor="@color/blue_500"/>
+
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:id="@+id/txtNameTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/txtCountItem"
+                android:layout_toRightOf="@id/txtSelectAll"
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:text="لیست نامزدهای انتخاباتی"/>
+
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:visibility="gone"
+                android:id="@+id/txtCountItem"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_toLeftOf="@id/cardViewDeleteAll"
+                android:layout_marginRight="8dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textSize="11sp"
+                android:gravity="center"
+                tools:text="3عدد" />
+
+            <androidx.cardview.widget.CardView
+                android:visibility="invisible"
+                android:id="@+id/cardViewDeleteAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="8dp"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="6dp">
+
+                <ImageView
+                    android:padding="4dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@drawable/ic_delete2" />
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:id="@+id/linearNotDataPresent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_politician" />
+
+                <com.razzaghi.electionhelper.util.SimpleTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:text="درحال حاضر نامزدی برای نمایش وجود ندارد!"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|bottom"
+        android:layout_margin="16dp"
+        android:text="وارد کردن نامزد جدید"
+        android:textSize="13sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textColor="@color/grey_10"
+        app:icon="@drawable/ic_add_note"
+        app:iconSize="30dp"
+        app:iconTint="@null"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

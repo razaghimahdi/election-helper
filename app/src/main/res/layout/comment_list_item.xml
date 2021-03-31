@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginLeft="4dp"
+    android:layout_marginRight="4dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="12dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="8dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="right|center"
+            android:padding="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="عنوان نظر:"
+                android:layout_marginBottom="4dp"/>
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:id="@+id/txtTitle"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text=" نظر"/>
+            <LinearLayout
+                android:gravity="right|center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/linearDesc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.razzaghi.electionhelper.util.SimpleTextView
+                    android:textAppearance="@style/TextAppearance.AppCompat.Title"
+                    android:textSize="16sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="متن نظر:"
+                    android:layout_marginBottom="4dp"/>
+                <com.razzaghi.electionhelper.util.SimpleTextView
+                    android:id="@+id/txtDesc"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textSize="13sp"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text=" نظر"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:visibility="invisible"
+            android:id="@+id/viewDisLike"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/red_400"/>
+        <View
+            android:visibility="invisible"
+            android:id="@+id/viewLike"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/green_600"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

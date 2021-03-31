@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+
+        <com.razzaghi.electionhelper.util.SimpleTextView
+            android:layout_marginBottom="8dp"
+            android:layout_width="match_parent"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:layout_height="wrap_content"
+            android:text="انتخاب کنید:"/>
+
+        <LinearLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+            android:id="@+id/linearGallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:paddingRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="گالری"/>
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                app:srcCompat="@drawable/ic_gallery"/>
+        </LinearLayout>
+
+        <View
+            android:layout_marginRight="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey_300"/>
+
+        <LinearLayout
+            android:foreground="?attr/selectableItemBackground"
+            android:gravity="center|right"
+            android:orientation="horizontal"
+            android:id="@+id/linearCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp">
+            <com.razzaghi.electionhelper.util.SimpleTextView
+                android:paddingRight="8dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="دوربین"/>
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:srcCompat="@drawable/ic_camera3"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
